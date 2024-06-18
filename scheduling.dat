@@ -1,0 +1,38 @@
+ 
+ # Definiamo un insieme di processi e processori # 
+ 
+ set T := 1 2 3;  # Insieme dei processi
+ set P := 1 2 3;    # Insieme dei processori
+
+param r := 3;  # Numero di processori
+
+param BigM := 1000000;
+
+
+ # Deadline per ogni processo 
+param d :=
+3 15
+2 20
+1 25;
+ # Tempo di esecuzione dell'operazione relativa del processo i sul processore j
+
+param p :=
+[1, 1] 3
+[1, 2] 5
+[1, 3] 4
+[2, 1] 2
+[2, 2] 6
+[2, 3] 5
+[3, 1] 4
+[3, 2] 7
+[3, 3] 3;
+
+    
+	
+	
+
+	
+	
+	
+	
+	
