@@ -37,7 +37,7 @@ void Executive::add_frame(std::vector<size_t> frame)
 	
 	frames.push_back(frame);
 
-	/* ... */
+	
 }
 
 void Executive::start()
@@ -101,9 +101,9 @@ void Executive::task_function(Executive::task_data & task)
     {
         auto start = std::chrono::high_resolution_clock::now();
 		// wait for activation
-		while (task.status != State::READY)				// READY : task pronto per l'esecuzione
+		while (task.status != State::READY)		// READY : task pronto per l'esecuzione
 			task.task_cond->wait(l);
-        task.status = State::RUNNING;					// RUNNING : task in esecuzione
+        task.status = State::RUNNING;			// RUNNING : task in esecuzione
 		task.function();
         task.status = State::IDLE;
          auto end = std::chrono::high_resolution_clock::now();        
